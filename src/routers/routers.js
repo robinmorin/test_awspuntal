@@ -6,7 +6,7 @@ module.exports = function(app){
         res.status(200).json(data);
       });
     });
-}
+};
 
 app.post('/dados', (req,res) => {
     const dadosStruct = {
