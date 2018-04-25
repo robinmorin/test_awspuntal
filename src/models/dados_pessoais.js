@@ -24,4 +24,19 @@ dadosModel.getDados = (callback) => {
   }
 };
 
+dadosModel.insertDados = (data, callback) => {
+  if(connection){
+    connection.query('INSERT INTO dados_pessoas SET ?',data,
+        (err,result) => {
+          if(err){
+            throw err;
+          } else {
+            callback(null, {'InsertId':result.insertId
+                          })
+         }
+      }
+    )
+  }
+};
+
 module.exports = dadosModel;
