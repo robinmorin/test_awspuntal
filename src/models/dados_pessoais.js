@@ -1,7 +1,7 @@
 "use strict";
 const mysql = require("mysql");
 
-connection = mysql.createConnection({
+const connection = mysql.createConnection({
     host: 'awspuntal.cy8mjhkps5hp.sa-east-1.rds.amazonaws.com',
     user: 'root',
     password: 'r0b1nm0r1n',
